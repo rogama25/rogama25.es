@@ -1,0 +1,38 @@
+---
+---
+<div class="h-20 w-full">
+  <ul class="list-none flex place-content-around h-full items-center bg-gray-800">
+    <li class="nb-link">
+      <a href="/">Socials</a>
+    </li>
+    <li class="nb-link">
+      <a href="/projects">Projects</a>
+    </li>
+    <li class="nb-link">
+      <a href="/techs">Technologies</a>
+    </li>
+    <li class="nb-link">
+      <a href="/about">About</a>
+    </li>
+  </ul>
+</div>
+<style>
+  @tailwind base;
+
+  @layer base {
+    .nb-link:hover{
+      @apply bg-orange-800;
+    }
+
+    .nb-link {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      @apply p-6
+    }
+
+    .nb-link>a {
+      @apply p-6
+    }
+  }
+</style>
