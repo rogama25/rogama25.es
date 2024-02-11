@@ -6,7 +6,7 @@ import Link from "@/components/Link.astro";
 ---
 
 <Layout title="rogama25 homepage">
-  <main class="grid-cols-1 sm:grid-cols-2 grid min-h-0 max-sm:min-h-0 flex-1">
+  <main class="grid-cols-1 sm:grid-cols-[35fr_65fr] grid min-h-0 max-sm:min-h-0 flex-1">
     <section class="flex flex-col items-center justify-center w-full p-5 gap-5">
       <h1 class="text-5xl">rogama25's website</h1>
       <Image src={ProfileImage} alt="profile image"
@@ -17,8 +17,8 @@ import Link from "@/components/Link.astro";
         I'm currently working on a few projects, and I'm also a contributor to some open source projects.
       </p>
     </section>
-    <section class="h-fit sm:h-full overflow-auto flex flex-col justify-center">
-      <div class="flex flex-col items-center justify-center w-full p-5 gap-5">
+    <section class="flex items-center min-h-0 sm:overflow-scroll">
+      <section class="flex flex-col items-center w-full p-5 gap-5 max-h-full">
         <h1 class="text-5xl">Links</h1>
         <Link title="Twitter" image="mdi:twitter" link="https://twitter.com/rogama25"/>
         <Link title="Instagram" image="mdi:instagram" link="https://instagram.com/rogama25"/>
@@ -27,7 +27,7 @@ import Link from "@/components/Link.astro";
         <Link title="Telegram" image="mdi:telegram" link="https://t.me/rogama25"/>
         <Link title="Mastodon" image="mdi:mastodon" link="https://tkz.one/@rogama25"/>
         <Link title="Bluesky" image="ri:bluesky-fill" link="https://bsky.app/profile/rogama25.bsky.social"/>
-      </div>
+      </section>
     </section>
   </main>
 </Layout>
