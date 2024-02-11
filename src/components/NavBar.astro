@@ -1,7 +1,7 @@
 ---
 ---
 <div class="h-20 w-full">
-  <ul class="list-none flex place-content-around h-full items-center bg-gray-800">
+  <ul class="list-none flex justify-around h-full items-center bg-gray-800 max-sm:justify-between">
     <li class="nb-link">
       <a href="/">Socials</a>
     </li>
@@ -28,11 +28,7 @@
       height: 100%;
       display: flex;
       align-items: center;
-      @apply p-6
-    }
-
-    .nb-link>a {
-      @apply p-6
+      padding: min(1.5rem, 2.5vw);
     }
   }
 </style>

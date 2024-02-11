@@ -8,7 +8,8 @@ import icon from "astro-icon";
 export default defineConfig({
   integrations: [tailwind(), react(), icon({
       include: {
-          mdi: ["*"]
+          mdi: ["*"],
+          ri: ["*"]
       }
   })],
   site: "https://www-new.rogama25.es"

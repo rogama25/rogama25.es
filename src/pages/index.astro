@@ -6,17 +6,27 @@ import Link from "@/components/Link.astro";
 ---
 
 <Layout title="rogama25 homepage">
-  <main class="grid-cols-1 sm:grid-cols-2 grid min-h-0 max-sm:min-h-0">
+  <main class="grid-cols-1 sm:grid-cols-2 grid min-h-0 max-sm:min-h-0 flex-1">
     <section class="flex flex-col items-center justify-center w-full p-5 gap-5">
       <h1 class="text-5xl">rogama25's website</h1>
       <Image src={ProfileImage} alt="profile image"
              class="rounded-full w-8/12 aspect-square"/>
+      <p class="text-center">
+        Hello, I'm rogama25, a software developer and a free software enthusiast.
+        <br/>
+        I'm currently working on a few projects, and I'm also a contributor to some open source projects.
+      </p>
     </section>
-    <section class="h-fit sm:h-full overflow-auto">
+    <section class="h-fit sm:h-full overflow-auto flex flex-col justify-center">
       <div class="flex flex-col items-center justify-center w-full p-5 gap-5">
         <h1 class="text-5xl">Links</h1>
         <Link title="Twitter" image="mdi:twitter" link="https://twitter.com/rogama25"/>
         <Link title="Instagram" image="mdi:instagram" link="https://instagram.com/rogama25"/>
+        <Link title="GitHub" image="mdi:github" link="https://github.com/rogama25"/>
+        <Link title="LinkedIn" image="mdi:linkedin" link="https://linkedin.com/in/rogama25/"/>
+        <Link title="Telegram" image="mdi:telegram" link="https://t.me/rogama25"/>
+        <Link title="Mastodon" image="mdi:mastodon" link="https://tkz.one/@rogama25"/>
+        <Link title="Bluesky" image="ri:bluesky-fill" link="https://bsky.app/profile/rogama25.bsky.social"/>
       </div>
     </section>
   </main>

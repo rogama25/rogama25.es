@@ -1,17 +1,20 @@
 ---
-import {Icon} from "astro-icon/components";
+import { Icon } from "astro-icon/components";
 interface Props {
-  title: string;
-  image: string
-  link: string
+    title: string;
+    image: string;
+    link: string;
 }
 
-const {title, image, link} = Astro.props
+const { title, image, link } = Astro.props;
 ---
+
 <div class="bg-white w-9/12 text-black p-5 px-10">
   <a href={link} class="flex gap-4 items-center">
     <Icon name={image} size={32} />
-    <b class="text-xl">{title}</b>
-    <p class="text-gray-500 text-sm">({new URL(link).hostname})</p>
+    <div class="flex md:items-center max-md:flex-col gap-1 md:gap-4">
+      <b class="text-xl">{title}</b>
+      <p class="text-gray-500 text-sm">({new URL(link).hostname})</p>
+    </div>
   </a>
 </div>
