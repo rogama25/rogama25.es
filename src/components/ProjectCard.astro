@@ -1,0 +1,28 @@
+---
+import {Icon} from "astro-icon/components";
+import {Octokit} from "octokit";
+
+interface Props {
+  title: string,
+  description: string,
+  slug: string
+}
+const {title, description, slug} = Astro.props
+const apiKey = import.meta.env.GITHUB_API_KEY
+const octokit = new Octokit({auth: apiKey})
+const data = await octokit.request(`/repos/${slug}`)
+---
+<a href=`https://github.com/${slug}` class="w-9/12 md:w-6/12 bg-white text-gray-500 p-4 rounded-md">
+  <p class="text-black">{title} <span class="text-gray-500 text-sm">{slug}</span></p>
+  <p>{description}</p>
+  <div class="flex flex-row gap-6">
+    <div class="flex flex-row gap-1">
+      <Icon name="mdi:star-outline"/>
+      <span> {data.data.stargazers_count}</span>
+    </div>
+    <div class="flex flex-row gap-1">
+      <Icon name="mdi:source-fork"/>
+      <span> {data.data.forks_count}</span>
+    </div>
+  </div>
+</a>

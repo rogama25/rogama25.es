@@ -1,11 +1,14 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 ---
 
 <Layout title="My projects">
-    <main class="flex flex-col items-center justify-center">
-        <h1 class="text-5xl">My projects</h1>
-        <p>WIP</p>
-        <a href="/" class="underline">Back to home</a>
-    </main>
+  <main class="flex flex-col items-center justify-center gap-3">
+    <h1 class="text-5xl">My projects</h1>
+    <ProjectCard title="rogama25" description="My website" slug="rogama25/rogama25.es"/>
+    <ProjectCard title="rogama25" description="My website" slug="rogama25/rogama25.es"/>
+    <ProjectCard title="rogama25" description="My website" slug="rogama25/rogama25.es"/>
+    <a href="/" class="underline">Back to home</a>
+  </main>
 </Layout>
