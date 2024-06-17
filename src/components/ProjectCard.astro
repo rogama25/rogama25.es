@@ -9,8 +9,19 @@ interface Props {
 }
 const {title, description, slug} = Astro.props
 const apiKey = import.meta.env.GITHUB_API_KEY
-const octokit = new Octokit({auth: apiKey})
-const data = await octokit.request(`/repos/${slug}`)
+let stars
+let forks
+const octokit = new Octokit({auth: apiKey, throttle: {
+  enabled: false
+  }})
+try {
+  const data = await octokit.request(`/repos/${slug}`)
+  stars = data.data.stargazers_count
+  forks = data.data.forks_count
+} catch (e) {
+  stars = stars || "? (rate limited)"
+  forks = forks || "? (rate limited)"
+}
 ---
 <a href=`https://github.com/${slug}` class="w-9/12 md:w-6/12 bg-white text-gray-500 p-4 rounded-md">
   <p class="text-black">{title} <span class="text-gray-500 text-sm">{slug}</span></p>
@@ -18,11 +29,11 @@ const data = await octokit.request(`/repos/${slug}`)
   <div class="flex flex-row gap-6">
     <div class="flex flex-row gap-1">
       <Icon name="mdi:star-outline"/>
-      <span> {data.data.stargazers_count}</span>
+      <span> {stars}</span>
     </div>
     <div class="flex flex-row gap-1">
       <Icon name="mdi:source-fork"/>
-      <span> {data.data.forks_count}</span>
+      <span> {forks}</span>
     </div>
   </div>
 </a>

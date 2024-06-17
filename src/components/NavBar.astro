@@ -1,26 +1,18 @@
 ---
 ---
 <div class="h-20 w-full">
-  <ul class="list-none flex justify-around h-full items-center bg-gray-800 max-sm:justify-between">
-    <li class="nb-link">
-      <a href="/">Socials</a>
-    </li>
-    <li class="nb-link">
-      <a href="/projects">Projects</a>
-    </li>
-    <li class="nb-link">
-      <a href="/techs">Technologies</a>
-    </li>
-    <li class="nb-link">
-      <a href="/about">About</a>
-    </li>
-  </ul>
+  <div class="list-none flex justify-around h-full items-center bg-gray-800 max-sm:justify-between">
+    <a href="/" class="nb-link">Socials</a>
+    <a href="/projects" class="nb-link">Projects</a>
+    <a href="/techs" class="nb-link">Technologies</a>
+    <a href="/about" class="nb-link">About</a>
+  </div>
 </div>
 <style>
   @tailwind base;
 
   @layer base {
-    .nb-link:hover{
+    .nb-link:hover {
       @apply bg-orange-800;
     }
 
