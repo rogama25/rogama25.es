@@ -1,11 +1,23 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import TechIcon from "../components/TechIcon.astro";
 ---
 
 <Layout title="Techs I use">
-    <main class="flex flex-col items-center justify-center">
+    <main class="flex flex-col items-center gap-3 p-6">
         <h1 class="text-5xl">Techs I use</h1>
-        <p>WIP</p>
+        <div class="grid grid-cols-4 gap-12 p-8">
+          <TechIcon name="fa6-brands:git"/>
+          <TechIcon name="fa6-brands:python"/>
+          <TechIcon name="fa6-brands:java"/>
+          <TechIcon name="fa6-brands:node-js"/>
+          <TechIcon name="fa6-brands:html5"/>
+          <TechIcon name="fa6-brands:css3"/>
+          <TechIcon name="fa6-brands:js"/>
+          <TechIcon name="fa6-brands:react"/>
+          <TechIcon name="fa6-brands:windows"/>
+          <TechIcon name="fa6-brands:linux"/>
+        </div>
         <a href="/" class="underline">Back to home</a>
     </main>
 </Layout>

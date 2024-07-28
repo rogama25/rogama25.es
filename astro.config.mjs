@@ -9,7 +9,8 @@ export default defineConfig({
   integrations: [tailwind(), react(), icon({
       include: {
           mdi: ["*"],
-          ri: ["*"]
+          ri: ["*"],
+          "fa6-brands": ["*"],
       }
   })],
   site: "https://www-new.rogama25.es"
